@@ -1,0 +1,81 @@
+install.packages(ggplot2)
+library(ggplot2)
+
+
+#1#
+dat1 <- data.frame(
+  integer= factor(c("1","1","2","2","4","4","6","6","8","8")),
+  performance = factor(c("CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC"), levels=c("CPI","IPC")),
+  number = c(1.0696,0.9349,0.6248,1.6004,0.5678,1.7613,0.5678,1.7613,0.5678,1.7613)
+)
+ggplot(data=dat1, aes(x=integer, y=number, fill=performance)) +geom_bar(stat="identity", position=position_dodge())+
+  geom_text(aes(label=dat1$number),position= position_dodge(width=0.9),vjust=-.5)+xlab("Number of integer ALU")+ylab("Performance")
+
+#2#
+dat2<- data.frame(
+  integer= factor(c("1","1","2","2","4","4","6","6","8","8")),
+  performance = factor(c("CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC"), levels=c("CPI","IPC")),
+  number = c(0.5678,1.7613,0.5678,1.7613,0.5678,1.7613,0.5678,1.7613,0.5678,1.7613))
+  ggplot(data=dat2, aes(x=integer, y=number, fill=performance)) +geom_bar(stat="identity", position=position_dodge())+
+    geom_text(aes(label=dat2$number),position= position_dodge(width=0.9),vjust=-.5)+xlab("Number of integer Multiplier")+ylab("Performance")
+
+#3#
+  dat3<- data.frame(
+    integer= factor(c("1","1","2","2","4","4","6","6","8","8")),
+    performance = factor(c("CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC"), levels=c("CPI","IPC")),
+    number = c(0.8206,1.2186,0.5687,1.7583,0.5678,1.7683,0.5678,1.7683,0.5678,1.7683))
+  ggplot(data=dat3, aes(x=integer, y=number, fill=performance)) +geom_bar(stat="identity", position=position_dodge())+
+    geom_text(aes(label=dat3$number),position= position_dodge(width=0.9),vjust=-.5)+xlab("Number of memory system port")+ylab("Performance")
+  
+#4#
+  dat4<- data.frame(
+    integer= factor(c("1","1","2","2","4","4","6","6","8","8")),
+    performance = factor(c("CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC"), levels=c("CPI","IPC")),
+    number = c(0.5678,1.7613,0.5678,1.7613,0.5678,1.7613,0.5678,1.7613,0.5678,1.7613))
+  ggplot(data=dat4, aes(x=integer, y=number, fill=performance)) +geom_bar(stat="identity", position=position_dodge())+
+    geom_text(aes(label=dat4$number),position= position_dodge(width=0.9),vjust=-.5)+xlab("Number of float point ALU")+ylab("Performance")
+
+#5#
+  dat5<- data.frame(
+    integer= factor(c("1","1","2","2","4","4","6","6","8","8")),
+    performance = factor(c("CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC"), levels=c("CPI","IPC")),
+    number = c(0.5834,1.76141,0.5678,1.7613,0.5678,1.7613,0.5678,1.7613,0.5678,1.7613))
+  ggplot(data=dat5, aes(x=integer, y=number, fill=performance)) +geom_bar(stat="identity", position=position_dodge())+
+    geom_text(aes(label=dat5$number),position= position_dodge(width=0.9),vjust=-.5)+xlab("Number of float point Multiplier")+ylab("Performance")
+#6#
+  dat6<- data.frame(
+    integer= factor(c("1","1","2","2","4","4","6","6","8","8")),
+    performance = factor(c("CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC"), levels=c("CPI","IPC")),
+    number = c(1.0852,0.9215,0.8529,1.1724,0.8363,1.1958,0.8363,1.1958,0.8363,1.1958))
+  ggplot(data=dat6, aes(x=integer, y=number, fill=performance)) +geom_bar(stat="identity", position=position_dodge())+
+    geom_text(aes(label=dat6$number),position= position_dodge(width=0.9),vjust=-.5)+xlab("Number of integer ALU")+ylab("Performance")
+#7#
+  dat7<- data.frame(
+    integer= factor(c("1","1","2","2","4","4","6","6","8","8")),
+    performance = factor(c("CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC"), levels=c("CPI","IPC")),
+    number = c(1.0852,0.9215,1.0852,0.9215,1.0852,0.9215,1.0852,0.9215,1.0852,0.9215))
+  ggplot(data=dat7, aes(x=integer, y=number, fill=performance)) +geom_bar(stat="identity", position=position_dodge())+
+    geom_text(aes(label=dat7$number),position= position_dodge(width=0.9),vjust=-.5)+xlab("Number of integer multiplier")+ylab("Performance")
+
+  #8#
+  dat8<- data.frame(
+    integer= factor(c("1","1","2","2","4","4","6","6","8","8")),
+    performance = factor(c("CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC"), levels=c("CPI","IPC")),
+    number = c(1.0852,0.9215,1.0851,0.9215,1.0851,0.9215,1.0851,0.9215,1.0851,0.9215))
+  ggplot(data=dat8, aes(x=integer, y=number, fill=performance)) +geom_bar(stat="identity", position=position_dodge())+
+    geom_text(aes(label=dat8$number),position= position_dodge(width=0.9),vjust=-.5)+xlab("Number of memory system port")+ylab("Performance")
+  #9#
+  dat9<- data.frame(
+    integer= factor(c("1","1","2","2","4","4","6","6","8","8")),
+    performance = factor(c("CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC"), levels=c("CPI","IPC")),
+    number = c(1.0852,0.9215,1.0852,0.9215,1.0852,0.9215,1.0852,0.9215,1.0852,0.9215))
+  ggplot(data=dat9, aes(x=integer, y=number, fill=performance)) +geom_bar(stat="identity", position=position_dodge())+
+    geom_text(aes(label=dat9$number),position= position_dodge(width=0.9),vjust=-.5)+xlab("Number of float point ALU")+ylab("Performance")
+  
+  #10#
+  dat10<- data.frame(
+    integer= factor(c("1","1","2","2","4","4","6","6","8","8")),
+    performance = factor(c("CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC","CPI","IPC"), levels=c("CPI","IPC")),
+    number = c(1.0852,0.9215,1.0696,0.9349,1.0696,0.9349,1.0696,0.9349,1.0696,0.9349))
+  ggplot(data=dat10, aes(x=integer, y=number, fill=performance)) +geom_bar(stat="identity", position=position_dodge())+
+    geom_text(aes(label=dat10$number),position= position_dodge(width=0.9),vjust=-.5)+xlab("Number of float point Multiplier")+ylab("Performance")
